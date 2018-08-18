@@ -31,7 +31,15 @@ then
   fi
 else
   echo "not selected master branch"
-  git branch
+  # Get all the branch list
+  hasDev=$(echo $(git branch) | grep -o "dev" | wc -w)
+  if [ $hasDev -eq "1" ]
+  then
+    echo "dev branch exist..."
+  else
+    echo "dev branch doesn't exist...."
+  fi
+
 fi
 
 # Git commit message
