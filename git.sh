@@ -56,7 +56,7 @@ else
     fi
   else
     # dev branch exist....
-    # yet to add dev branch scripts
+    echo "currently in $(git branch | sed -n '/\* /s///p') branch"
   fi
 fi
 
