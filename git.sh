@@ -43,7 +43,6 @@ then
     exit 1
   fi
 else
-  echo "not selected master branch"
   # Get all the branch list and check for dev branch
   if [ $(echo $(git branch) | grep -o "dev" | wc -w) -eq "0" ]
   then
